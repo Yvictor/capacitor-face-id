@@ -10,7 +10,7 @@ import LocalAuthentication
 public class FaceId: CAPPlugin {
     
     @objc func isAvailable(_ call: CAPPluginCall) {
-        if #available(iOS 11, *) {
+        if #available(iOS 12, *) {
             let authContext = LAContext()
             
             let _ = authContext.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: nil)
